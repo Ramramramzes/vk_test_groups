@@ -5,5 +5,5 @@
     { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "/build/$1" }
   ],
-  "functions": { "api/**/*.ts": { "runtime": "nodejs14" } }
+  "functions": { "api/**/*.ts": { "runtime": "nodejs14@1.0.0" } }
 }
