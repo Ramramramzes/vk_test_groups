@@ -48,3 +48,10 @@
 .loader_block{
   display: flex !important;
 }
+
+.container{
+  display: flex;
+}
+.cards_list{
+  margin-left: 30%;
+}

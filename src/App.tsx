@@ -31,7 +31,9 @@ function App() {
   const [loading, setLoading] = useState(false);
   const data = useServer();
 
+
   useEffect(() => {
+    setLoading(false)
     setGroups(data);
   }, [data]);
 
@@ -86,14 +88,13 @@ function App() {
     }
   };
 
+
   return (
-    <div>
+    <div className={styles.container}>
       <ul>
         <li><input type="checkbox" onChange={handleClosedChange} checked={closedChecked} /> Приватные</li>
         <li><input type="checkbox" onChange={handleOpenChange} checked={openChecked} /> Открытые</li>
         <li><input type="checkbox" onChange={handleFriendsChange} checked={friendsChecked} /> С друзьями</li>
-      </ul>
-      <ul>
         <li><input type="checkbox" value="red" onChange={handleColorChange} /> Красный</li>
         <li><input type="checkbox" value="green" onChange={handleColorChange} /> Зеленый</li>
         <li><input type="checkbox" value="blue" onChange={handleColorChange} /> Синий</li>
@@ -102,7 +103,7 @@ function App() {
         <li><input type="checkbox" value="yellow" onChange={handleColorChange} /> Желтый</li>
         <li><input type="checkbox" value="purple" onChange={handleColorChange} /> Фиолетовый</li>
       </ul>
-      <ul>
+      <ul className={styles.cards_list}>
         {groups && groups.map((el, index) => {
           return <Cards key={index} el={el} index={index} />;
         })}
@@ -110,7 +111,8 @@ function App() {
 
       <div className={`${styles.loader_none} loader_container ${loading ? styles.loader_block : ''}`}>
         <span className="loader"></span>
-      </div> 
+      </div>
+      {data.length == 0 || !data ?<div className='loader_container'><span className="loader"></span></div> : ''}
     </div>
   );
 }

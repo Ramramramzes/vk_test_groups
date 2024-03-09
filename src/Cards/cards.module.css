@@ -1,8 +1,13 @@
 .item{
   display: flex;
+
+  width: 350px;
+  justify-content: space-around;
+  margin-bottom: 5%;
 }
 
 .infoblock{
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
