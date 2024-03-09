@@ -4,6 +4,5 @@
     { "src": "/api/server", "dest": "api/server-functions.ts" },
     { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "/build/$1" }
-  ],
-  "functions": { "api/**/*.ts": { "runtime": "nodejs" } }
+  ]
 }
