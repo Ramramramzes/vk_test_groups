@@ -1,9 +1,9 @@
 {
   "version": 2,
   "routes": [
-    { "src": "/api/server", "dest": "api/-function.ts" },
+    { "src": "/api/server", "dest": "api/server-functions.ts" },
     { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "/build/$1" }
   ],
-  "functions": { "api/**/*.ts": { "runtime": "nodejs18@1.0.0" } }
+  "functions": { "api/**/*.ts": { "runtime": "nodejs14" } }
 }
