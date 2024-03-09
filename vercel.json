@@ -1,14 +1,11 @@
 {
   "version": 2,
-  "builds": [
-    { "src": "build/*", "use": "@vercel/static-build" }
-  ],
-  "functions": { "api/**/*.js": { "runtime": "nodejs14.x" } },
   "routes": [
-    { "src": "/api/(.*)", "dest": "api/$1.js" },
+    { "src": "/api/server", "dest": "api/server.js" },
     { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "/build/$1" }
   ],
+  "functions": { "api/**/*.js": { "runtime": "nodejs14.x" } },
   "postbuild": {
     "commands": [
       "npm run server"
