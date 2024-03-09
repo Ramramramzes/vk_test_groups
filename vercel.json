@@ -5,10 +5,5 @@
     { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "/build/$1" }
   ],
-  "functions": { "api/**/*.js": { "runtime": "nodejs14.x" } },
-  "postbuild": {
-    "commands": [
-      "npm run server"
-    ]
-  }
+  "functions": { "api/**/*.js": { "runtime": "nodejs18.x" } }
 }

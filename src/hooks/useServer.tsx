@@ -5,7 +5,7 @@ export default function useServer() {
   const [res, setRes] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/data')
+    axios.get('/data')
       .then((resp) => {
         setRes(resp.data);
       })
