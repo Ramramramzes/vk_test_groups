@@ -9,8 +9,7 @@
     "build_lone": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "server": "json-server -w server/server.json -p 3001",
-    "build": "concurrently \"npm run server\" \"npm run build_lone\""
+    "server": "json-server -w server/server.json -p 3001"
   },
   "dependencies": {
     "axios": "^1.6.7",
