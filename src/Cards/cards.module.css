@@ -1,0 +1,8 @@
+.item{
+  display: flex;
+}
+
+.infoblock{
+  display: flex;
+  flex-direction: column;
+}
