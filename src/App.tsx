@@ -2,7 +2,6 @@ import styles from './App.module.css'
 import { useState, useEffect, ChangeEvent } from 'react';
 import useServer from './hooks/useServer';
 import { Cards } from './Cards';
-import { test } from './hooks/useTest';
 
 export interface GetGroupsResponse {
   result: 1 | 0;
@@ -24,7 +23,6 @@ export interface User {
 }
 
 function App() {
-  test()
   const [groups, setGroups] = useState<Group[]>([]);
   const [closedChecked, setClosedChecked] = useState(false);
   const [openChecked, setOpenChecked] = useState(false);
