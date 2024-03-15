@@ -1,8 +1,0 @@
-{
-  "version": 2,
-  "routes": [
-    { "src": "/api/server", "dest": "api/server-functions.ts" },
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/build/$1" }
-  ]
-}

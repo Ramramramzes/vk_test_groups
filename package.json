@@ -12,6 +12,7 @@
     "server": "json-server -w server/server.json -p 3001"
   },
   "dependencies": {
+    "@vercel/edge-config": "^1.1.0",
     "axios": "^1.6.7",
     "express": "^4.18.3",
     "generator-react-ts-component-dir": "^1.0.0",
